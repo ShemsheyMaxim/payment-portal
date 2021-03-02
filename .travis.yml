@@ -9,3 +9,4 @@ cache:
 
 before_install:
   - chmod +x mvnw
+  - mysql -e 'CREATE DATABASE payment_portal;
