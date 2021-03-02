@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - openjdk11
+script:
+  - mvn clean install
+cache:
+  directories:
+    - $HOME/.m2
+services:
+  - postgresql
+before_install:
+  - chmod +x mvnw
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
