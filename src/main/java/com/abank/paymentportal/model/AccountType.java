@@ -1,15 +1,37 @@
 package com.abank.paymentportal.model;
 
-public enum AccountType {
-    CARD_SIMPLE("card/simple");
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.Data;
 
-    private final String accountType;
+@Data
+@Entity
+@Table(name = "account_types")
+public class AccountType{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "nameType")
+    @Enumerated(EnumType.STRING)
+    private NameType nameType;
 
-    AccountType(String accountType) {
-        this.accountType = accountType;
-    }
+    public enum NameType {
+        CARD_SIMPLE("card/simple");
 
-    public String getAccountType() {
-        return accountType;
+        private final String type;
+
+        NameType(String type) {
+            this.type = type;
+        }
+
+        public String getType() {
+            return type;
+        }
     }
 }

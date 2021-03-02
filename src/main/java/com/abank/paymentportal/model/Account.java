@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -17,7 +19,8 @@ public class Account {
     private Long id;
     @Column(name = "account_num",nullable = false)
     private int accountNum;
-    @Column(name = "account_type",nullable = false)
+    @JoinColumn(name = "account_type",nullable = false)
+    @OneToOne
     private AccountType accountType;
     private double balance;
 }
