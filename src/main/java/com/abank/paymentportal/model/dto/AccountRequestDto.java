@@ -1,11 +1,13 @@
 package com.abank.paymentportal.model.dto;
 
-import com.abank.paymentportal.model.AccountType;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
 public class AccountRequestDto {
+    @JsonProperty("account_num")
     private int accountNum;
-    private AccountType accountType;
+    @JsonProperty("account_type")
+    private String accountType;
     private double balance;
 }

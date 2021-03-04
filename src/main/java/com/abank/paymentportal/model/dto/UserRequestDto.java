@@ -1,12 +1,14 @@
 package com.abank.paymentportal.model.dto;
 
-import com.abank.paymentportal.model.Account;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Set;
 import lombok.Data;
 
 @Data
 public class UserRequestDto {
+    @JsonProperty("first_name")
     private String firstName;
+    @JsonProperty("last_name")
     private String lastName;
-    private Set<Account> accounts;
+    private Set<AccountRequestDto> accounts;
 }

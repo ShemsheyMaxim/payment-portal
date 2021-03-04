@@ -15,4 +15,9 @@ public class AccountTypeServiceImpl implements AccountTypeService {
     public AccountType create(AccountType accountType) {
         return accountTypeRepository.save(accountType);
     }
+
+    @Override
+    public AccountType getAccountTypeByNameType(AccountType.NameType nameType) {
+        return accountTypeRepository.getAccountTypeByNameType(nameType);
+    }
 }

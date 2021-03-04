@@ -3,6 +3,8 @@ package com.abank.paymentportal.service.impl;
 import com.abank.paymentportal.model.Account;
 import com.abank.paymentportal.repository.AccountRepository;
 import com.abank.paymentportal.service.AccountService;
+import java.util.List;
+import java.util.Set;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,15 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Account create(Account account) {
         return accountRepository.save(account);
+    }
+
+    @Override
+    public List<Account> getAll() {
+        return accountRepository.findAll();
+    }
+
+    @Override
+    public void createAll(Set<Account> accounts) {
+        accountRepository.saveAll(accounts);
     }
 }

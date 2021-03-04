@@ -4,4 +4,6 @@ import com.abank.paymentportal.model.AccountType;
 
 public interface AccountTypeService {
     AccountType create(AccountType accountType);
+
+    AccountType getAccountTypeByNameType(AccountType.NameType nameType);
 }
