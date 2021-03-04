@@ -1,9 +1,10 @@
 package com.abank.paymentportal.service.impl;
 
+import com.abank.paymentportal.model.Account;
 import com.abank.paymentportal.model.User;
 import com.abank.paymentportal.repository.UserRepository;
 import com.abank.paymentportal.service.UserService;
-import java.util.List;
+import java.util.Set;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAll() {
-        return userRepository.findAll();
+    public Set<Account> getAllAccountsById(Long userId) {
+        return userRepository.getAllAccountsById(userId);
     }
 }

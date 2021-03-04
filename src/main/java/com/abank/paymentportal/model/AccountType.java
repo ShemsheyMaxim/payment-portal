@@ -13,11 +13,11 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "account_types")
-public class AccountType{
+public class AccountType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "nameType")
+    @Column(name = "name_type")
     @Enumerated(EnumType.STRING)
     private NameType nameType;
 
