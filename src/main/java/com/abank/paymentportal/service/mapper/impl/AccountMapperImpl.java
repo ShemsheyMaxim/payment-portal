@@ -20,7 +20,8 @@ public class AccountMapperImpl implements AccountMapper {
         AccountResponseDto accountResponseDto = new AccountResponseDto();
         accountResponseDto.setId(account.getId());
         accountResponseDto.setAccountNum(account.getAccountNum());
-        accountResponseDto.setAccountType(account.getAccountType());
+        String accountType = account.getAccountType().getNameType().getType();
+        accountResponseDto.setAccountType(accountType);
         accountResponseDto.setBalance(account.getBalance());
         return accountResponseDto;
     }

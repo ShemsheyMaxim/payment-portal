@@ -11,10 +11,8 @@ import com.abank.paymentportal.service.mapper.UserMapper;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.stereotype.Component;
 
-@Data
 @Component
 @AllArgsConstructor
 public class UserMapperImpl implements UserMapper {
