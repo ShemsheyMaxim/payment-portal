@@ -1,13 +1,12 @@
-package com.abank.paymentportal.model.dto;
+package com.abank.paymentportal.model.dto.payment;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.springframework.http.HttpStatus;
 
 @Data
 public class PaymentResponseDto {
     @JsonProperty("payment_id")
     private Long paymentId;
     @JsonProperty("status")
-    private HttpStatus httpStatus;
+    private String status;
 }

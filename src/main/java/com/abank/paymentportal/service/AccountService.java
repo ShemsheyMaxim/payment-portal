@@ -7,4 +7,6 @@ public interface AccountService {
     Account create(Account account);
 
     void createAll(Set<Account> accounts);
+
+    Account getById(Long accountId);
 }

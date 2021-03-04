@@ -1,10 +1,11 @@
 package com.abank.paymentportal.controller;
 
 import com.abank.paymentportal.model.User;
-import com.abank.paymentportal.model.dto.UserCreatedResponseDto;
-import com.abank.paymentportal.model.dto.UserRequestDto;
+import com.abank.paymentportal.model.dto.user.UserCreatedResponseDto;
+import com.abank.paymentportal.model.dto.user.UserRequestDto;
 import com.abank.paymentportal.service.UserService;
 import com.abank.paymentportal.service.mapper.UserMapper;
+import javax.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<UserCreatedResponseDto> create(
-            @RequestBody UserRequestDto userRequestDto) {
+            @RequestBody @Valid UserRequestDto userRequestDto) {
         User user = userMapper.toUserEntity(userRequestDto);
         User createdUser = userService.create(user);
         UserCreatedResponseDto userCreatedResponseDto = new UserCreatedResponseDto();

@@ -18,7 +18,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "account_num",nullable = false)
-    private int accountNum;
+    private String accountNum;
     @JoinColumn(name = "account_type",nullable = false)
     @OneToOne
     private AccountType accountType;

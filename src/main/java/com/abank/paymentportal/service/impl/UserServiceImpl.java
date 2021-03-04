@@ -5,6 +5,7 @@ import com.abank.paymentportal.model.User;
 import com.abank.paymentportal.repository.UserRepository;
 import com.abank.paymentportal.service.UserService;
 import java.util.Set;
+import javax.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +22,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public Set<Account> getAllAccountsById(Long userId) {
         return userRepository.getAllAccountsById(userId);
+    }
+
+    @Override
+    public User getById(Long userId) {
+        return userRepository.findById(userId).orElseThrow(() ->
+                new EntityNotFoundException("User by id " + userId + " not found in table"));
     }
 }

@@ -2,8 +2,8 @@ package com.abank.paymentportal.service.mapper.impl;
 
 import com.abank.paymentportal.model.Account;
 import com.abank.paymentportal.model.AccountType;
-import com.abank.paymentportal.model.dto.AccountRequestDto;
-import com.abank.paymentportal.model.dto.AccountResponseDto;
+import com.abank.paymentportal.model.dto.account.AccountRequestDto;
+import com.abank.paymentportal.model.dto.account.AccountResponseDto;
 import com.abank.paymentportal.service.AccountTypeService;
 import com.abank.paymentportal.service.mapper.AccountMapper;
 import java.util.Arrays;

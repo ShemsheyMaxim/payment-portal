@@ -8,4 +8,6 @@ public interface UserService {
     User create(User user);
 
     Set<Account> getAllAccountsById(Long userId);
+
+    User getById(Long userId);
 }

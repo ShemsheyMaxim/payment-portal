@@ -2,9 +2,9 @@ package com.abank.paymentportal.service.mapper.impl;
 
 import com.abank.paymentportal.model.Account;
 import com.abank.paymentportal.model.User;
-import com.abank.paymentportal.model.dto.AccountRequestDto;
-import com.abank.paymentportal.model.dto.UserRequestDto;
-import com.abank.paymentportal.model.dto.UserResponseDto;
+import com.abank.paymentportal.model.dto.account.AccountRequestDto;
+import com.abank.paymentportal.model.dto.user.UserRequestDto;
+import com.abank.paymentportal.model.dto.user.UserResponseDto;
 import com.abank.paymentportal.service.AccountService;
 import com.abank.paymentportal.service.mapper.AccountMapper;
 import com.abank.paymentportal.service.mapper.UserMapper;

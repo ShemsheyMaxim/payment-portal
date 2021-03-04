@@ -1,4 +1,4 @@
-package com.abank.paymentportal.model.dto;
+package com.abank.paymentportal.model.dto.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

@@ -4,6 +4,7 @@ import com.abank.paymentportal.model.Account;
 import com.abank.paymentportal.repository.AccountRepository;
 import com.abank.paymentportal.service.AccountService;
 import java.util.Set;
+import javax.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +21,11 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void createAll(Set<Account> accounts) {
         accountRepository.saveAll(accounts);
+    }
+
+    @Override
+    public Account getById(Long accountId) {
+        return accountRepository.findById(accountId).orElseThrow(() ->
+                new EntityNotFoundException("Account by id " + accountId + " not found in table"));
     }
 }

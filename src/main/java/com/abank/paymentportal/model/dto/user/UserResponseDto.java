@@ -1,4 +1,4 @@
-package com.abank.paymentportal.model.dto;
+package com.abank.paymentportal.model.dto.user;
 
 import com.abank.paymentportal.model.Account;
 import java.util.Set;

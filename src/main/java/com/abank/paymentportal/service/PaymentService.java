@@ -7,4 +7,8 @@ public interface PaymentService {
     Payment create(Payment payment);
 
     List<Payment> createAll(List<Payment> payments);
+
+    Payment getById(Long paymentId);
+
+    Payment getPaymentBySourceAccIdAndDestAccId(Long sourceAccId, Long destAccId);
 }
